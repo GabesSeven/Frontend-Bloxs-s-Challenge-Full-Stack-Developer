@@ -1,52 +1,28 @@
-# Prerequisites
-*.d
+# Dependências
+/node_modules
+/.pnp
+.pnp.js
 
-# Object files
-*.o
-*.ko
-*.obj
-*.elf
+# Arquivos de build
+/build
+/dist
+/.next
 
-# Linker output
-*.ilk
-*.map
-*.exp
+# Arquivos temporários
+/.cache
+/.eslintcache
+/.yarn
+yarn-error.log
 
-# Precompiled Headers
-*.gch
-*.pch
+# Arquivos de ambiente
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
 
-# Libraries
-*.lib
-*.a
-*.la
-*.lo
+# Outros
+.DS_Store
+Thumbs.db
 
-# Shared objects (inc. Windows DLLs)
-*.dll
-*.so
-*.so.*
-*.dylib
-
-# Executables
-*.exe
-*.out
-*.app
-*.i*86
-*.x86_64
-*.hex
-
-# Debug files
-*.dSYM/
-*.su
-*.idb
-*.pdb
-
-# Kernel Module Compile Results
-*.mod*
-*.cmd
-.tmp_versions/
-modules.order
-Module.symvers
-Mkfile.old
-dkms.conf
+# Login 
+src/components/Login.js
