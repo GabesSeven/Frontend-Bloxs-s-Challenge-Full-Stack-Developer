@@ -23,6 +23,3 @@ yarn-error.log
 # Outros
 .DS_Store
 Thumbs.db
-
-# Login 
-src/components/Login.js
