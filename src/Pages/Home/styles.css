@@ -1,0 +1,137 @@
+.container-home {
+    background-color: #FFDB00;
+
+    width: 100%;
+    min-height: 100%;
+}
+
+.home-main {
+    display: flex;
+    align-self: center;
+    justify-content: center;
+
+    width: 100%;
+    min-height: 85%;
+
+    border-top-left-radius: 50px;
+    border-top-right-radius: 50px;
+    padding: 55px 100px 0 100px;
+
+    background-color: white;
+    position: relative;
+}
+
+.home-main-nav {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.btn-filtro {
+    all: unset;
+
+    gap: 4px;
+    width: 80px;
+    height: 30px;
+    margin-bottom: 26px;
+
+    background: #FAFAFA;
+    box-shadow: 0px 2px 11px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    font-family: 'Lato';
+    font-weight: 700;
+    font-size: 12px;
+    line-height: 14px;
+
+    color: #000000;
+    cursor: pointer;
+}
+
+.table-info {
+    display: flex;
+    flex-direction: column;
+
+    padding-bottom: 205px;
+}
+
+.table-info-categories {
+    background: #FAFAFA;
+    box-shadow: 0px 2px 11px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+
+    display: flex;
+    align-items: center;
+
+    width: 960px;
+    gap: 96px;
+    padding: 20px 141px 20px 27px;
+}
+
+.table-info-categories h3 {
+    font-family: 'Lato';
+
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 17px;
+
+    color: #000000;
+}
+
+.transaction-box-data {
+    scroll-behavior: auto;
+    min-height: 450px;
+    max-height: 460px;
+    overflow-x: scroll;
+    overflow-x: hidden;
+}
+
+.transaction-box-data::-webkit-scrollbar {
+    width: 10px;
+}
+
+.transaction-box-data::-webkit-scrollbar-track {
+    box-shadow: 0px 2px 11px rgb(0 0 0 / 10%);
+    background: linear-gradient(180deg, #05ede184 10.02%, #645ffb84 80.63%);
+    border-radius: 10px;
+}
+
+.transaction-box-data::-webkit-scrollbar-thumb {
+    background: #ffffff72;
+    border-radius: 40%;
+}
+
+.data__asc-dsc {
+    width: 41px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    cursor: pointer;
+}
+
+.btn-filtro:hover {
+    transform: scale(1.02);
+}
+
+.btn-filtro:active {
+    box-shadow: none;
+    transform: scale(1.00);
+}
+
+.filter {
+    display: flex;
+    flex-direction: column;
+    gap: 34px;
+    min-width: 50%;
+}
+
+.box-main__filter-transaction {
+    display: flex;
+    position: relative;
+}

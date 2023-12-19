@@ -1,0 +1,133 @@
+.container-resume {
+    width: 236px;
+    height: 258px;
+    margin-left: 40px;
+}
+
+.resume {
+    width: 236px;
+    height: 196px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: space;
+    background: #FAFAFA;
+    box-shadow: 0px 2px 11px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    padding: 26px 24px 31px 23px;
+    margin-bottom: 16px;
+}
+
+.add-register {
+    all: unset;
+    font-family: 'Rubik';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 17px;
+    color: #FFFFFF;
+    width: 236px;
+    height: 46px;
+    background: #FFDB00;
+    border-radius: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+
+.resumo {
+    width: 72px;
+    height: 21px;
+    font-family: 'Rubik';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 21px;
+    color: #2F2F2F;
+    margin-bottom: 23px;
+}
+
+.entrada-saida p {
+    width: 81px;
+    height: 15px;
+    font-family: 'Rubik';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 13px;
+    line-height: 15px;
+    color: #2F2F2F;
+
+}
+
+.saldo,
+.saida,
+.entrada {
+    display: flex;
+    justify-content: flex-start;
+    gap: 10px;
+}
+
+.saldo strong {
+    width: 81px;
+    height: 17px;
+    font-family: 'Rubik';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 17px;
+    color: #2F2F2F;
+
+}
+
+.saldo span {
+    min-width: 120px;
+    height: 17px;
+    font-family: 'Rubik';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 17px;
+    display: flex;
+    justify-content: center;
+}
+
+.entrada {
+    margin-bottom: 12px;
+}
+
+.saida {
+    margin-bottom: 19px;
+    padding: 0px 0px 19px 0px;
+    border-bottom: 1px solid #EAEAEA;
+    width: 200px;
+}
+
+.entrada span {
+    width: 89px;
+    height: 15px;
+    font-family: 'Rubik';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 13px;
+    line-height: 15px;
+    display: flex;
+    align-items: center;
+    text-align: right;
+    color: #645FFB;
+}
+
+.saida span {
+    width: 89px;
+    height: 15px;
+    font-family: 'Rubik';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 13px;
+    line-height: 15px;
+    display: flex;
+    align-items: center;
+    text-align: right;
+    color: #FA8C10;
+
+}

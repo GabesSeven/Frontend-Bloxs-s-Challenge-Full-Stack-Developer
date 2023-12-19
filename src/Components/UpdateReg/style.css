@@ -1,0 +1,11 @@
+.input-categoria select {
+    border: 1px solid rgba(79, 79, 79, 0.752);
+    border-radius: 5px;
+    padding: 5px 10px;
+    background-color: transparent;
+    font-family: inherit;
+    font-size: inherit;
+    cursor: inherit;
+    width: 485px;
+    height: 63.49px;
+}

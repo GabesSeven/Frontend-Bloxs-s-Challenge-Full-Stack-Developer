@@ -1,0 +1,80 @@
+.line-data {
+    border-bottom: 1px solid #E0E0E0;
+
+    width: 964px;
+    padding-top: 21px;
+    padding-bottom: 21px;
+
+    display: flex;
+    align-items: center;
+
+    text-align: center;
+}
+
+.day-week,
+.descript,
+.category,
+.valor {
+    font-family: 'Lato';
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 17px;
+
+    color: #000000;
+}
+
+.day {
+    width: 110px;
+    font-family: 'Lato';
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 17px;
+
+    color: #000000;
+}
+
+.day-week {
+    width: 100px;
+    margin-left: 46px;
+}
+
+.descript {
+    width: 200px;
+    margin-left: 24px;
+}
+
+.category {
+    width: 100px;
+    margin-left: 9px;
+}
+
+.valor {
+    width: 170px;
+    margin-left: 10px;
+}
+
+.nav-line-data {
+    width: 180px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+
+    position: relative;
+}
+
+.btn-line-data {
+    cursor: pointer;
+}
+
+.btn-line-data:hover {
+    transform: scale(1.1);
+}
+
+.credit {
+    color: #7B61FF;
+}
+
+.debit {
+    color: #FA8C10;
+}

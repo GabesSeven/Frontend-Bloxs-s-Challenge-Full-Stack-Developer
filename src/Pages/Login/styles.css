@@ -1,0 +1,112 @@
+.logo {
+    cursor: pointer;
+    width: 200px;
+}
+
+.login-main {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    margin-top: 194px;
+    margin-bottom: 295px;
+
+    position: relative;
+}
+
+.login-main__info {
+    width: 614px;
+    margin-top: 80px;
+}
+
+.login-main__info h1 {
+    margin-bottom: 33px;
+
+    font-family: 'Rubik';
+    font-weight: 700;
+    font-size: 52px;
+    line-height: 62px;
+    align-items: center;
+
+    color: #FFFFFF;
+}
+
+.login-main__info p {
+    width: 600px;
+    margin-bottom: 43px;
+
+    font-family: 'Rubik';
+    font-weight: 400;
+    font-size: 28px;
+    line-height: 33px;
+    align-items: center;
+
+    color: #FFFFFF;
+}
+
+.login-main__info button {
+    width: 284px;
+    height: 52px;
+}
+
+.login-main__card {
+    background-color: #FFDB00;
+
+    margin-left: 90px;
+    padding: 60px 32px 49px 32px;
+    width: 513px;
+    height: 535px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    border-radius: 20px;
+}
+
+.login-main__card h3 {
+    font-family: 'Rubik';
+    font-weight: 500;
+    font-size: 28px;
+    line-height: 33px;
+
+    color: #212121;
+}
+
+.login-main__card form {
+    display: flex;
+    flex-direction: column;
+
+    margin-top: 48px;
+}
+
+.login-main__card form input {
+    width: 449px;
+    height: 63px;
+    margin: 8px 0 31px 0;
+    padding: 10px;
+
+    font-family: 'Rubik';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 21px;
+
+    border: 1px solid #555555;
+    border-radius: 5px;
+}
+
+.login-main__card form label {
+    font-family: 'Rubik';
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 21px;
+
+    color: #484848;
+}
+
+.login-main__card form button {
+    margin-top: 42px;
+    width: 449px;
+    height: 52px;
+}

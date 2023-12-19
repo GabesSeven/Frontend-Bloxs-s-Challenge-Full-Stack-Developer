@@ -1,0 +1,29 @@
+.entry-btn {
+    all: unset;
+    width: 50%;
+    background: #B9B9B9;
+    border-radius: 10px 0px 0px 10px;
+    text-align: center;
+    height: 56px;
+    font-family: 'Rubik';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 17px;
+    color: #FFFFFF;
+}
+
+.out-btn {
+    all: unset;
+    width: 50%;
+    height: 56px;
+    background: #FF576B;
+    border-radius: 0px 10px 10px 0px;
+    text-align: center;
+    font-family: 'Rubik';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 17px;
+    color: #FFFFFF;
+}

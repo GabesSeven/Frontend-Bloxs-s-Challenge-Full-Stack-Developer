@@ -1,0 +1,131 @@
+:root {
+    --cor-btn-category: #000000;
+    --back-btn-category: #FFFF;
+    --symbol-btn-category: url('../../Assets/plus.svg');
+}
+
+.container-filter {
+    width: 959px;
+    margin-bottom: 60px;
+    padding: 32px 0 13px 36px;
+
+    background: #FAFAFA;
+    box-shadow: 0px 2px 11px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+}
+
+.title {
+    font-family: 'Rubik';
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 14px;
+
+    color: #B9B9B9;
+}
+
+.categories {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 12px;
+
+    margin-bottom: 20px;
+    margin-top: 20px;
+}
+
+
+.btn-category,
+.default {
+    all: unset;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    box-sizing: border-box;
+    min-width: 140px;
+    height: 30px;
+    padding: 4px 10px;
+
+    background: #FAFAFA;
+    box-shadow: 0px 2px 11px rgba(0, 0, 0, 0.1);
+    border-radius: 30px;
+    cursor: pointer;
+    text-align: center;
+
+    background-image: var(--symbol-btn-category);
+    background-repeat: no-repeat;
+    background-position-x: 92%;
+    background-position-y: center;
+
+    font-family: 'Rubik';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 10px;
+    line-height: 12px;
+
+    color: var(--cor-btn-category);
+    background-color: var(--back-btn-category);
+}
+
+.select {
+    --back-btn-category: #FFDB00;
+    --cor-btn-category: white;
+    --symbol-btn-category: url('../../Assets/x-btn-filter.svg')
+}
+
+.apply-filter {
+    display: flex;
+    gap: 18px;
+}
+
+.clear,
+.apply {
+    all: unset;
+
+    text-align: center;
+    box-sizing: border-box;
+    width: 98px;
+    height: 30px;
+
+    background: #FAFAFA;
+    box-shadow: 0px 2px 11px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+
+    font-family: 'Lato';
+    font-weight: 700;
+    font-size: 12px;
+    line-height: 14px;
+
+    color: #000000;
+}
+
+.apply:hover,
+.clear:hover {
+    box-shadow: 1px 1px 1px 1px #b9b9b99e;
+    transform: scale(1.04);
+}
+
+.apply:active,
+.clear:active {
+    box-shadow: 1px 1px 1px 1px #00f2ff5a;
+    transform: scale(1.00);
+    background-color: #FFDB00;
+    color: white;
+}
+
+.btn-category:hover,
+.default:hover {
+    --cor-btn-category: white;
+    background-color: #FFDB00;
+    transform: scale(1.04);
+    opacity: 0.9;
+}
+
+.btn-category:active,
+.default:active {
+    --cor-btn-category: white;
+    background-color: #FFDB00;
+    transform: scale(1.00);
+    opacity: 1;
+}
