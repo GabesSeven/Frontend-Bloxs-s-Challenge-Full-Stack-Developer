@@ -56,6 +56,7 @@ Toda funcionalidade principal de contas e operações das contas:
  <li>Controle de token.</li>
 </ol>
 
+<!--
 ## Interface Gráfica 🖥️
 <br><br>
 
@@ -66,7 +67,6 @@ Toda funcionalidade principal de contas e operações das contas:
 </p>
 </figure>
 
-<!--
 
 <br>
 <hr>
