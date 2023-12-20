@@ -1,13 +1,54 @@
 import "./styles.css";
-import { clear } from "../../store";
+import { clear, getItem } from "../../store";
 import { useNavigate } from "react-router-dom";
 import Logo from "../../Assets/logo.png";
 import Profile from "../../Assets/profile.svg";
 import Exit from "../../Assets/exit-page.svg";
+import api from "../../Api/index";
 
 export default function Header({ modal, setEdit, User }) {
 
   const navigate = useNavigate();
+
+  // const logout = async () => {
+  //   const token = getItem('token')
+  //   try { 
+  //     const response = await api.post(
+  //       "http://127.0.0.1:5000/logout",
+  //       token,
+  //       {
+  //         headers: {
+  //           Authorization: `Bearer ${token}`
+  //         }
+  //       }
+  //     );
+  //     clear();
+  //     navigate("/login");
+  //   } catch (error) {
+  //     console.log(error)
+  //   }
+  // };
+
+  const logout = async () => {
+    const token = getItem('token');
+  
+    try { 
+      const response = await api.post(
+        "http://127.0.0.1:5000/logout",
+        null,
+        {
+          headers: {
+            Authorization: `Bearer ${token}`
+          }
+        }
+      );
+      
+      clear();
+      navigate("/login");
+    } catch (error) {
+      console.log(error);
+    }
+  };
 
   return (
     <header>
@@ -30,8 +71,7 @@ export default function Header({ modal, setEdit, User }) {
           src={Exit}
           alt="Ícone de Saída"
           onClick={() => {
-            clear();
-            navigate("/login");
+            logout();
           }}
         ></img>
       </div>

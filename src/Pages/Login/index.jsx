@@ -35,17 +35,16 @@ export default function Login() {
     // Se formulário correto, redireciona para "home"
     try { 
       // Requisição para o Backend com credênciais e verificação do token de resposta
-      // const respost = await api.post("/login", form);
-      // const { token } = respost.data;
+      const respost = await api.post("http://127.0.0.1:5000/login", form);
+      const { token_acesso } = respost.data;
 
-      // setItem("token", token);
-      setItem("token", "umtokenvalido")
+      setItem("token", token_acesso)
       navigate("/home");
 
     } catch (error) {
       // Se formulário errado, exibe mensagem"
       // Função descontruída que modifica estado da variável "alertMsg" com o valor "Todos os campos são obrigatórios"
-      setAlertMsg("Todos os campos são obrigatórios")
+      setAlertMsg(error.response.data.message)
       msgAlert()
     }
   };
@@ -89,13 +88,15 @@ export default function Login() {
           <form onSubmit={(e) => handlerSubmit(e)}>
             <label>E-mail</label>
             <input
+              required
               type="email"
               name="email"
               value={form.email}
               onChange={(e) => handlerChangeInput(e)}
             />
             <label>Password</label>
-            <input
+            <input 
+              required
               type="password"
               name="senha"
               value={form.senha}

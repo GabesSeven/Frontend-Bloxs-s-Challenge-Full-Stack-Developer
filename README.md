@@ -1,243 +1,115 @@
-# Desafio | Front-end - Módulo 3
+# <em>Frontend - Bloxs s Challenge - Full Stack Developer</em>
 
-Após alguns meses trabalhando em projetos mais simples, você foi designado pelo seu Tech Lead para desenvolver uma aplicação que será apresentada a um cliente muito importante.
+<br><br>
 
+<p style="text-align: justify;">
+    Interface web desenvolvida em React para se comunicar com backend.
+  <ol>
+    <li>BackEnd: <a href='https://github.com/GabesSeven/Backend-Bloxs-s-Challenge-Full-Stack-Developer'>https://github.com/GabesSeven/Backend-Bloxs-s-Challenge-Full-Stack-Developer</a>;</li>
+    <li>FrontEnd: <a href='https://github.com/GabesSeven/Frontend-Bloxs-s-Challenge-Full-Stack-Developer'>https://github.com/GabesSeven/Frontend-Bloxs-s-Challenge-Full-Stack-Developer</a>.</li>
+    <li>Banco de Dados MySQL para o Render: <a href='https://github.com/GabesSeven/Database-Bloxs-s-Challenge-Full-Stack-Developer'>https://github.com/GabesSeven/Database-Bloxs-s-Challenge-Full-Stack-Developer</a>.</li>
+  </ol>
+</p>
 
-Para o seu desenvolvimento foi liberado layout que você pode encontrar no seguinte [ link](https://www.figma.com/file/BwOAJkF8OeMON36TyFdhkj/DinDin-2.0?node-id=0%3A1).
+<br>
+<hr>
+<br>
 
+## Execução Local 🏃‍♀️
+<br><br>
 
-O sistema trata-se de uma aplicação para controles de finanças pessoais, e as funcionalidades são: 
+<p>No <strong>Terminal</strong> <em>/ <strong>Console</em></strong>:</p>
+<ol>
+	<li>Faça um clone do projeto na sua máquina:<br><code>git@github.com:GabesSeven/Frontend-Bloxs-s-Challenge-Full-Stack-Developer.git</code></li><br>
+	<li>Entre na pasta raiz do projeto:<br><code>cd Frontend-Bloxs-s-Challenge-Full-Stack-Developer/</code></li><br>
+	<!-- <li>Em um terminal, crie um ambiente virtual:<br> <code>python3.11 -v .venv</code></li><br> -->
+	<li>Em um terminal, instale as dependências:<br> <code>yarn install</code></li><br>
+	<li>Em um terminal, execute a aplicação:<br> <code>yarn start</code></li><br>
+    <!-- <li>Em um terminal, instale as bibliotecas:<br> <code>pip3 install -r requirements.txt</code></li><br> -->
+  <li>Em um navegador:<br><a href='http://127.0.0.1:3000/'>http://127.0.0.1:3000/</a></li><br>
+</ol>
 
-- Cadastro do usuário 
-- Login de usuário 
-- Cadastro de uma nova transação 
-- Edição de uma transação 
-- Exclusão de uma transação 
-- Listagem de transações 
-- Permitir ordenar a tabela por data 
-- Na parte de resumo, o valor de entradas, saídas e saldo é obtido por meio do endpoint de extrato da **API** 
-- Permitir o usuário filtrar a tabela por categoria
-- Editar perfil de usuário
-- Deslogar usuário
+<br>
+<hr>
+<br>
 
- 
-## Detalhamento de Requisitos:
-# Pessoa A
-### Cadastro de um novo usuário:
 
-Para cadastrar um novo usuário você terá que preencher o formulário na página de **sign-up**.
+## ⚠️⚠️⚠️ Observações - O que faltou? ⚠️⚠️⚠️
+<br><br>
 
-![](https://i.imgur.com/BZNNvti.png)
+Toda funcionalidade principal de contas e operações das contas: 
+<ol>
+ <li>Parte visual, falta finalizar alguns detalhes;</li>
+ <li>Bloqueio de conta;</li>
+ <li>Criação de conta manual, só é feita automaticamente quando um usuário faz Login;</li>
+ <li>Visualização de Extrato e Saldo;</li>
+ <li>Saque;</li>
+ <li>Depósito.</li>
+</ol>
 
+## O que foi feito: 👍
+<br><br>
 
-*É importante garantir que todos os campos estão preenchidos, além de que as senha e confirmação de senha são iguais.
+<ol>
+ <li>Parte visual principal</li>
+ <li>Login / Logout;</li>
+ <li>Controle de token.</li>
+</ol>
 
-Ao clicar no botão **Cadastrar** você deverá enviar os dados do formulário para a **API** fazendo com que o sistema registre um novo usuário, caso dê certo o cadastro de um novo usuário, devemos redirecionar o usuário para a tela de **sign-in (login)**, assim ele já poderá se logar no sistema.
+## Interface Gráfica 🖥️
+<br><br>
 
----
-# Pessoa A
-### Login de usuário:
+<figure>
+<p align="center">
+  <img src="https://github.com/GabesSeven/Backend-Bloxs-s-Challenge-Full-Stack-Developer/assets/37443722/7dae7e44-3103-4d9b-9740-0d928164467d" height="450" width="650" alt="Console - banco SQLLite3"/><br>
+  Console - banco SQLLite3
+</p>
+</figure>
 
-1. Na página de login de usuário, temos um botão chamado **Cadastre-se**, esse botão deve levar o usuário para a tela de cadastrar um novo usuário **(sign-up)**:
-2. O formulário de login deve validar se os campos estão realmente preenchidos, se estiverem preenchidos você enviará uma requisição para a **API** para fazer o login desse usuário, é importante lembrar que existem informações como **token** e **userId** que precisam ser armazenadas no **localStorage** para que o usuário possa depois usar dentro da **área logada**.
-3. Caso o login dê certo o usuário deverá ser redirecionado para a tela principal (**main**) onde ele verá a listagem de suas transações.
-4. Caso o usuário esteja logado, nós devemos bloquear o acesso dele a página de login, sendo assim, somente quando o usuário estiver deslogado que poderá acessar a página **sign-in (login)**.
+### Endpoints
+<ol>
+  <li>Extrato</li>
+  <li>Saque - ocorre verificação de limite por valores de transações diárias</li>
+</ol>
 
-![](https://i.imgur.com/vvnluj6.png)
 
----
-# Pessoa B
-### Página principal (main):
+<!--
 
+<br>
+<hr>
+<br>
 
-Após o usuário fazer o login ele será redirecionado para a página principal, essa página só poderá ser acessada por usuários que estão logados na aplicação, caso contrário ao tentar acessar a página principal sem estar logado o usuário deverá ser redirecionado para a página de login (**sign-in**).
 
-Nessa página ele verá todas as informações:
-1. Header da aplicação com botões, logos e ícones.
-2. Tabela com a listagem de transações.
-3. Área de resumo, que traz as informações de entradas, saídas e saldos.
-4. Botão para adicionar uma nova transação.
-5. Botão para abrir área de filtros.
+## Tecnologias Utilizadas 💾
+<br><br>
 
-Veja na imagem abaixo:
+![GIT](https://img.shields.io/badge/git-F05032?logo=git&logoColor=white&style=for-the-badge) &nbsp;
 
-![](https://i.imgur.com/SYm8uuY.png)
+![GITHUB](https://img.shields.io/badge/github-181717?logo=git&logoColor=white&style=for-the-badge) &nbsp;
 
----
-# Pessoa B
-### Cadastro de uma nova transação:
+![KOTLIN](https://img.shields.io/badge/kotlin-7F52FF?logo=kotlin&logoColor=white&style=for-the-badge) &nbsp;
 
-Para cadastrar uma nova transação o usuário deverá clicar no botão `Adicionar Registro`, que ficará logo abaixo da área de `resumo`.
+![JAVA](https://img.shields.io/badge/Java-ED8B00?logo=java&logoColor=white&style=for-the-badge) &nbsp;
 
-![](https://i.imgur.com/10q85lh.png)
- 
+![GRADLE](https://img.shields.io/badge/gradle-02303A?logo=gradle&logoColor=white&style=for-the-badge) &nbsp;
 
-Ao clicar no referido botão, um modal com a opção de adicionar informações de uma transação deve ser exibido:
+![SPRING](https://img.shields.io/badge/spring-6DB33F?logo=spring&logoColor=white&style=for-the-badge) &nbsp;
 
-![](https://i.imgur.com/qMegn2n.png)
+![SPRING BOOT](https://img.shields.io/badge/springboot-6DB33F?logo=springboot&logoColor=white&style=for-the-badge) &nbsp;
 
+![SWAGGER](https://img.shields.io/badge/swagger-85EA2D?logo=swagger&logoColor=white&style=for-the-badge) &nbsp;
 
-1. Nesse modal todas as informações devem ser preenchidas, lembrando que você pode adicionar uma `entrada` ou `saída` de dinheiro, por padrão o valor deve ser o de `saída`, caso o usuário queira adicionar um valor de entrada ele precisará clicar no botão **Entrada**.
-2. O **select** de **Categoria** deverá ser preenchido com as informações de categorias que a **API** traz, ou seja, as categorias devem ser listadas dentro do **select** com base em um **GET** na rota de **categoria** da **API.**
+![H2 DATABASE](https://img.shields.io/badge/H2DATABASE-1316BF?logo=databricks&logoColor=white&style=for-the-badge) &nbsp;
 
+![HIBERNATE](https://img.shields.io/badge/hibernate-59666C?logo=hibernate&logoColor=white&style=for-the-badge) &nbsp;
 
-*Todos os campos são obrigatórios!
+![FLYWAY](https://img.shields.io/badge/flyway-CC0200?logo=flyway&logoColor=white&style=for-the-badge) &nbsp; -->
 
-Após o usuário clicar no botão **confirmar**, uma nova transação deve ser inserida e a tabela de listagem deve ser atualizada.
+<br>
+<hr>
+<br>
 
-É importante lembrar que quando adicionarmos uma nova transação, devemos atualizar também a área de **RESUMO**.
-
----
-# Pessoa B
-### Editar uma transação:
-
-Para editar uma transação o usuário deverá clicar no ícone do lápis, que se encontrará na tabela de listagem de transações:
-
-
-![](https://i.imgur.com/crhos7x.png)
-
-Esse ícone => ![](https://i.imgur.com/iFD6G3k.png)
-
-Ao clicar no ícone de editar uma transação, o modal (que foi utilizado para adicionar uma nova transação) deverá ser aberto e as informações da transação "clicada", deverão ser preenchidas automaticamente, assim como a imagem abaixo:
-
-![](https://i.imgur.com/UGQ9uda.png)
-
-
-*Novamente, todos os campos são obrigatórios!
-
-Após validar os campos e o usuário clicar em confirmar, a transação deverá ser atualizada na `API`.
-
----
-# Pessoa B
-### Excluir uma transação:
-
-Para excluir uma transação o usuário deverá clicar no ícone da lixeira, que se encontrará na tabela de listagem de transações:
-
-![](https://i.imgur.com/crhos7x.png)
-
-Esse ícone => ![](https://i.imgur.com/X6GB3kh.png)
-
-Ao clicar nesse ícone, um "popup" irá aparecer para que o usuário confirme ou não a exclusão, fazendo com que não hajam exclusões por engano, veja abaixo como aparece o "popup":
-
-![](https://i.imgur.com/Ohhk1lhm.png)
-
----
-# Pessoa B
-### Listagem de transações:
-
-As transações registradas por meio dos endpoints da `api`, deverão ser listadas numa tabela que ficará ao centro da página, nessa tabela teremos 6 colunas, sendo:
-1. **Data** da transação no formato `dd/mm/yyyy`
-2. **Dia da semana**, nessa coluna deveremos utilizar apenas os primeiros nomes dos dias da semana, ao invéz de Segunda-Feira, deveremos utilizar o formato `Segunda`.
-3. **Descrição**, nessa coluna listaremos as descrições informadas no cadastro de transação.
-4. **Categoria**, aqui vamos mostrar as categorias inseridas em cada uma das transações cadastradas.
-5. **Valor**, nessa coluna exibiremos os valores de cada uma das transações. Existe uma regra importante nas cores e nos sinais, para valores de **entrada de dinheiro (credit)** exibimos o número positivo e na cor <span style="color:#7B61FF"><b>roxa</b></span>, já para **Saídas de dinheiro (debit)** exibimos o número na cor <span style="color:#FA8C10"><b>laranja</b></span>.
-7. Na última coluna nós não teremos um cabeçalho, nessa coluna ficarão os botões de editar e excluir.
-
-![](https://i.imgur.com/jie9f1T.png)
-
-Cada linha da tabela representa uma transação. Portanto cada botão representa a ação para um registro.
-
----
-# Pessoa A
-#### Cabeçalho da tabela:
-
-No cabeçalho da tabela deverá haver a opção de clicar e ordenar de forma **crescente** e **decrescente**, para isso basta o usuário clicar no nome da coluna, a cada clique a ordenação deve ser alterada entre **crescente** e **decrescente**.
-
-Somente a coluna **Data** poderá ser ordenada:
-
-Veja abaixo o ícone que representa que a coluna está sendo ordenada:
-
-- Ordenando a coluna data de forma crescente (do menor para o maior)
-    - ![](https://i.imgur.com/E0cR53u.png)
-
-**Importante:** Somente a coluna em ordenação deve conter o ícone.
-
----
-# Pessoa A
-### Resumo das transações:
-
-O resumo das transações devem ser exibidos numa "box", onde teremos apenas 3 informações:
-- Entradas
-- Saídas
-- Saldo
-
-É importante ressaltar que os valores de entrada, saída e saldos são calculados com base em um endpoint da **API** que traz o extrato das transações.
-
-
-Veja na imagem abaixo, como deve ser o resumo;
-![](https://i.imgur.com/6Rlu6a7.png)
-
----
-# Pessoa A
-### Filtros:
-
-
-A área de filtros por padrão é oculta, por isso você deve implementar a lógica para que quando o usuário clique no botão **Filtrar** a área de filtro seja exibida e quando clicar novamente seja ocultada, veja abaixo o botão que exibe/oculta a área de filtros:
-
-![](https://i.imgur.com/GCsalqk.png)
-
-
-Os filtros servem para dar granularidade aos dados, ou seja, para haver a possibilidade de exibir as transações conforme selecionamos requisitos para tal. Por exemplo, se disseremos que deve-se exibir apenas as transações da categoria **Depósito**, devemos listar na tabela somente as transações que pertencem àquela categoria.
-
-![](https://i.imgur.com/YzXbttF.png)
-
-
-
-Os filtros são cumulativos, ou seja, você pode filtrar por uma categoria ou por diversas categorias.
-
-
-O funcionamento dos filtros segue a seguinte ordem:
-1. Seleciona-se os filtros de categoria
-2. Após selecionar os filtros desejados, clica-se no botão **aplicar filtros**.
-
-
-Para limpar os filtros atuais, o usuário deverá clicar no botão **limpar filtros**
-
-**Importante:** 
-1. Ao clicar em aplicar filtros sem nenhum filtro selecionado, o sistema deve exibir todas as transações disponíveis cadastradas.
-2. Ao clicar em limpar filtros, o sistema deve exibir todas as transações disponíveis cadastradas.
-
-Veja na imagem abaixo os botões:
-![](https://i.imgur.com/X43exDw.png)
-
----
-# Pessoa B
-### Editar perfil de usuário:
-
-No header da aplicação existe um ícone:
-
-![](https://i.imgur.com/q6MS5wi.png)
-
-Ao clicar nesse ícone, deverá ser exibido um modal para edição do usuário logado.
-
-1. O modal deverá abrir com os dados do usuário já carregados nele (menos senha e confirmação de senha)
-2. Após o usuário preencher os campos ele deverá clicar em **confirmar**, nesse momento você deve validar se os campos estão preenchidos, caso estejam, você deve enviar as informações que a **API** solicita para fazer a atualização do usuário logado.
-3. Após o perfil ter sido atualizado o modal deverá ser fechado.
-4. Ao abrir novamente o modal, os dados do usuário devem estar atualizados.
-
-
-Veja na imagem o modal já preenchido:
-
-![](https://i.imgur.com/aWx7T9C.png)
-
-
---- 
-
-# Pessoa A
-### Logout e nome de usuário
-
-No header da página principal **(main)** você deverá:
-1. Preencher com o nome do usuário logado no momento.
-2. Além de adicionar uma função para deslogar o usuário ao clicar no botão que tem uma imagem que sugere ao usuário que ele vai deslogar da aplicação.
-
-
-Veja na imagem abaixo os ícones:
-![](https://i.imgur.com/Njzp33e.png)
-
-
----
- 
-
-**LEMBRE-SE**: é melhor feito do que perfeito, mas não faça mal feito!!!
-
-###### tags: `front-end` `módulo 3` `React` `CSS` `desafio`
+## Developer 🧑‍💻 
+<br><br>
+| [<img src="https://avatars.githubusercontent.com/u/37443722?v=4" width=115><br><sub>Gabriel Ferreira</sub>](https://github.com/GabesSeven)
+| :---: 
