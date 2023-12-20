@@ -20,7 +20,7 @@
 
 <p>No <strong>Terminal</strong> <em>/ <strong>Console</em></strong>:</p>
 <ol>
-	<li>Faça um clone do projeto na sua máquina:<br><code>git@github.com:GabesSeven/Frontend-Bloxs-s-Challenge-Full-Stack-Developer.git</code></li><br>
+	<li>Faça um clone do projeto na sua máquina:<br><code>git clone git@github.com:GabesSeven/Frontend-Bloxs-s-Challenge-Full-Stack-Developer.git</code></li><br>
 	<li>Entre na pasta raiz do projeto:<br><code>cd Frontend-Bloxs-s-Challenge-Full-Stack-Developer/</code></li><br>
 	<!-- <li>Em um terminal, crie um ambiente virtual:<br> <code>python3.11 -v .venv</code></li><br> -->
 	<li>Em um terminal, instale as dependências:<br> <code>yarn install</code></li><br>
@@ -65,13 +65,6 @@ Toda funcionalidade principal de contas e operações das contas:
   Console - banco SQLLite3
 </p>
 </figure>
-
-### Endpoints
-<ol>
-  <li>Extrato</li>
-  <li>Saque - ocorre verificação de limite por valores de transações diárias</li>
-</ol>
-
 
 <!--
 
